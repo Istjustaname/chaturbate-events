@@ -153,4 +153,4 @@ class ChaturbateEvents extends EventEmitter {
 
 }
 
-module.exports = ChaturbateEvents;
+export ChaturbateEvents;
