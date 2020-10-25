@@ -1,5 +1,4 @@
 "use strict";
-
 import transformUser from "./transform-user";
 
 export default {
