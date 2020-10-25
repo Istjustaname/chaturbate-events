@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
-const transformUser = require('./transform-user');
-const transformEmoticons = require('./transform-emoticons');
+import transformEmoticons from "./transform-emoticons";
+import transformUser from "./transform-user";
 
-module.exports = {
-  event: 'room_message',
-  method: 'onRoomMsg',
-  transform: (username, data) => {
-    return {
-      message: transformEmoticons(data.m),
-      user: transformUser(data),
-    };
-  },
+export default {
+	event: "room_message",
+	method: "onRoomMsg",
+	transform: (username, data) => {
+		return {
+			message: transformEmoticons(data.m),
+			user: transformUser(data),
+		};
+	},
 };

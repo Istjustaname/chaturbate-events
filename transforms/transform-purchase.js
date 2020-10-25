@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'purchase',
-  method: 'onNotify',
-  match: (data) => data.type === 'purchase_notification',
-  transform: (data) => {
-    return {
-      message: data.message,
-    };
-  },
+export default {
+	event: "purchase",
+	method: "onNotify",
+	match: (data) => data.type === "purchase_notification",
+	transform: (data) => {
+		return {
+			message: data.message,
+		};
+	},
 };

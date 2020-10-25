@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'auth',
-  method: 'onAuthResponse',
-  transform: (success) => {
-    return {
-      success: Boolean(success),
-    };
-  },
+export default {
+	event: "auth",
+	method: "onAuthResponse",
+	transform: (success) => {
+		return {
+			success: Boolean(success),
+		};
+	},
 };

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'private_show_cancel',
-  method: 'onNotifyPrivateShowCancel',
-  transform: () => undefined,
+export default {
+	event: "private_show_cancel",
+	method: "onNotifyPrivateShowCancel",
+	transform: () => undefined,
 };

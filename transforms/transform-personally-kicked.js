@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'personally_kicked',
-  method: 'onPersonallyKicked',
-  transform: (reason) => {
-    return {
-      reason: reason,
-    };
-  },
+export default {
+	event: "personally_kicked",
+	method: "onPersonallyKicked",
+	transform: (reason) => {
+		return {
+			reason: reason,
+		};
+	},
 };

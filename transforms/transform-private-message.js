@@ -1,23 +1,23 @@
-'use strict';
+"use strict";
 
-const transformUser = require('./transform-user');
-const transformEmoticons = require('./transform-emoticons');
+import transformEmoticons from "./transform-emoticons";
+import transformUser from "./transform-user";
 
-module.exports = {
-  event: 'private_message',
-  method: 'onPrivateMsg',
-  transform: (fromNick, data, tabNick) => {
-    let userData = data;
-    if (typeof data === 'string') {
-      userData = {
-        m: data,
-      };
-    }
+export default {
+	event: "private_message",
+	method: "onPrivateMsg",
+	transform: (fromNick, data, tabNick) => {
+		let userData = data;
+		if (typeof data === "string") {
+			userData = {
+				m: data,
+			};
+		}
 
-    return {
-      tabNick: tabNick,
-      user: transformUser(userData, fromNick),
-      message: transformEmoticons(userData.m),
-    };
-  },
+		return {
+			tabNick: tabNick,
+			user: transformUser(userData, fromNick),
+			message: transformEmoticons(userData.m),
+		};
+	},
 };

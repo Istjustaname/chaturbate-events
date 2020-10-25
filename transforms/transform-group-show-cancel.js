@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'group_show_cancel',
-  method: 'onNotifyGroupShowCancel',
-  transform: () => undefined,
+export default {
+	event: "group_show_cancel",
+	method: "onNotifyGroupShowCancel",
+	transform: () => undefined,
 };

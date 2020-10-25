@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  event: 'room_count',
-  method: 'onRoomCountUpdate',
-  transform: (count) => {
-    return {
-      count: count,
-    };
-  },
+export default {
+	event: "room_count",
+	method: "onRoomCountUpdate",
+	transform: (count) => {
+		return {
+			count: count,
+		};
+	},
 };
